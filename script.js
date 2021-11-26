@@ -1,14 +1,8 @@
-let num = 266219;
+const num = 266219;
+let arrNum = num.toString().split("").map(Number).reduce((x, y) => x * y);
+let degree = arrNum ** 3;
 
-let arrNum = num.toString().split("").map(Number);
 
-let total = 1;
-for (let i = 0; i < arrNum.length; i++) {
-    total *= arrNum[i]
-}
-
-console.log(total);
-
-let degree = total ** 3;
-console.log(degree);
-console.log(degree.toString().slice(0, 2));
+console.log("[arrNum]", arrNum);
+console.log("[degree]", degree);
+console.log("[degree]", degree.toString().slice(0, 2));
