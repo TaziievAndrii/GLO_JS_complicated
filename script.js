@@ -1,39 +1,40 @@
-const num = 266219;
-let arrNum = num.toString().split("").reduce((x, y) => x * y);
-let degree = arrNum ** 3;
+'use strict';
+
+// Задаем недели на русском и английском
+const ruWeek = "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье";
+const enWeek = "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday";
 
 let lang = "ru";
 
+// выводим неделю использование IF
 if (lang === "ru") {
-    console.log('Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье');
+    console.log(ruWeek);
 } else if (lang === "en") {
-    console.log('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
+    console.log(enWeek);
 } else {
     console.log("язык не опознан");
 }
 
+//Выводим неделю использование switch
 switch (lang) {
     case "ru":
-        console.log('Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье');
+        console.log(ruWeek);
         break;
     case "en":
-        console.log('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
+        console.log(enWeek);
         break;
     default:
         console.log("язык не опознан");
 }
 
+// Выводим неделю используя многомерный массив
 const langArray = {
-    ru: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
-    en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    ru: [ruWeek],
+    en: [enWeek]
 };
 console.log(langArray[lang]);
 
-let namePerson = "Артем";
+// Выводим обращение к сотруднику используя тернарные операторы
+let namePerson = "";
 console.log(namePerson === "Артем" ? "директор" :
     namePerson === "Александр" ? "преподаватель" : "студент");
-
-
-console.log("[arrNum]", arrNum);
-console.log("[degree]", degree);
-console.log("[degree]", degree.toString().slice(0, 2));
