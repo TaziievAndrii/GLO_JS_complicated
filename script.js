@@ -28,8 +28,8 @@ switch (lang) {
 
 // Выводим неделю используя многомерный массив
 const langArray = {
-    ru: [ruWeek],
-    en: [enWeek]
+    ru: ruWeek.split(", "),
+    en: enWeek.split(", ")
 };
 console.log(langArray[lang]);
 
