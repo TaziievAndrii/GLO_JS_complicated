@@ -3,10 +3,9 @@
 // Задаем недели на русском и английском
 const ruWeek = "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье";
 const enWeek = "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday";
+const lang = "ru";
 
-let lang = "ru";
-
-// выводим неделю использование IF
+// выводим неделю использовуя IF
 if (lang === "ru") {
     console.log(ruWeek);
 } else if (lang === "en") {
@@ -15,7 +14,7 @@ if (lang === "ru") {
     console.log("язык не опознан");
 }
 
-//Выводим неделю использование switch
+//Выводим неделю используя switch
 switch (lang) {
     case "ru":
         console.log(ruWeek);
