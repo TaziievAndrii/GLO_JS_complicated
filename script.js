@@ -1,10 +1,9 @@
 function getArgument(str) {
     if (typeof str != 'string') {
-        console.log("Передана не строка")
-        return;
+        return console.log("Передана не строка");
     }
-    if (str.length <= 30) return str;
-    return str.trim().slice(0, 30) + '...';
+    str = str.trim()
+    return str.length > 30 ? str.slice(0, 30) + '...' : str
 }
 
-console.log(getArgument("       12345hdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdf"));
+console.log('"' + getArgument("  12345hd   ") + '"');
